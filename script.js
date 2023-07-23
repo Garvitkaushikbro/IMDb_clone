@@ -8,18 +8,18 @@ const rightArrow = document.querySelector(".right-arrow");
 let position = 0;
 
 function slide() {
-  sliderContainer.style.transform = `translateX(${position}px)`;
+  resultContainer.style.transform = `translateX(${position}px)`;
 }
 
 leftArrow.addEventListener("click", () => {
   console.log("left");
-  position += 910; // Width of slide + margin-right
+  position += 900; // Width of slide + margin-right
   slide();
 });
 
 rightArrow.addEventListener("click", () => {
   console.log("right");
-  position -= 910; // Width of slide + margin-right
+  position -= 900; // Width of slide + margin-right
   slide();
 });
 
@@ -40,7 +40,7 @@ async function loadMovies(searchTerm) {
   const res = await fetch(`${URL}`);
   const data = await res.json();
   if (data.Response == "True") {
-    // displayMovieList(data.Search);
+    displayMovieList(data.Search);
     const totalResults = parseInt(data.totalResults);
     const resultsPerPage = data.Search ? data.Search.length : 0;
 
@@ -48,6 +48,7 @@ async function loadMovies(searchTerm) {
     const totalPages =
       resultsPerPage === 0 ? 0 : Math.ceil(totalResults / resultsPerPage);
 
+    position = 0;
     displayMoviePageGrid(totalPages, searchTerm);
   }
 }

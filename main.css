@@ -168,7 +168,6 @@ a {
 
 .movie-grid {
   flex: 0 0 900px;
-  margin-right: 10px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
