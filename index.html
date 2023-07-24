@@ -24,7 +24,8 @@
             class="form-control"
             placeholder="Search Movie Title ..."
             id="movie-search-box"
-            onkeypress="findMovies(event)"
+            onkeyup="findMovies(event)"
+            onclick="findMovies(event)"
           />
           <div class="search-list" id="search-list"></div>
         </div>

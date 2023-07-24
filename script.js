@@ -58,7 +58,6 @@ slideTracker.addEventListener("click", async function (e) {
 });
 
 function findMovies(event) {
-  if (event.key !== "Enter") return;
   position = 0;
   let searchTerm = movieSearchBox.value.trim();
   slideTracker.innerHTML = "";
