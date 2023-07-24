@@ -34,7 +34,7 @@ slideTracker.addEventListener("click", async function (e) {
       showcase.innerHTML = `
       <div class = "movie-poster">
           <img src = "${
-            details.Poster != "N/A" ? details.Poster : "image_not_found.png"
+            details.Poster != "N/A" ? details.Poster : "img/image_not_found.png"
           }" alt = "movie poster">
       </div>
       <div class = "movie-info">
@@ -112,7 +112,7 @@ async function addMoviesToSlider(searchTerm, page) {
         : movies[idx].Title;
     let moviePoster;
     if (movies[idx].Poster != "N/A") moviePoster = movies[idx].Poster;
-    else moviePoster = "image_not_found.png";
+    else moviePoster = "img/image_not_found.png";
     movieGridItem.innerHTML = `
       <div class="movie-grid-item-thumbnail" data-id=${movies[idx].imdbID}>
           <img src="${moviePoster}">
