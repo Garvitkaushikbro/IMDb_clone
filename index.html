@@ -31,8 +31,7 @@
             class="form-control"
             placeholder="Search Movie Title ..."
             id="movie-search-box"
-            onkeyup="findMovies()"
-            onclick="findMovies()"
+            onkeypress="findMovies(event)"
           />
           <div class="search-list" id="search-list"></div>
         </div>
@@ -74,6 +73,9 @@
       <!-- end of result container -->
     </div>
 
+    <div class="overlay hidden">
+      <div class="showcase hidden"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
